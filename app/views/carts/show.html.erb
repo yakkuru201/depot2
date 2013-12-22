@@ -2,6 +2,7 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
+<<<<<<< HEAD
 <%= render @cart %>
 
 <div class="cart_title">カート</div>
@@ -17,3 +18,11 @@
 
 <%= button_to 'カートを空にする', @cart, method: :delete,
     confirm: '本当によいですか？' %>
+=======
+<h2>Pragmaticカート</h2>
+<ul>
+  <% @cart.line_items.each do |item| %>
+    <li><%= item.quantity %> &times; <%= item.product.title %></li>
+  <% end %>
+</ul>
+>>>>>>> 25cc459659635f46f3e812af6ddbfdb38bfe7a0a
